@@ -1,0 +1,1 @@
+Welcome to Dice Junkies, a static eCommerce website built for SDEV153. This site showcases a fictional online store selling custom Dungeons & Dragons dice sets. It is designed using HTML, CSS, and JavaScript.
