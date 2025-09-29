@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Dice Junkies</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <img src="images/logo.png" alt="Dice Junkies logo" class="logo" width="96" height="96">
+      <h1>Contact</h1>
+      <nav aria-label="Primary" class="primary-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h2>Send us a message</h2>
+    <form id="contactForm" novalidate>
+      <fieldset>
+        <legend>Contact form</legend>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select a topic</option>
+          <option>Order question</option>
+          <option>Custom commission</option>
+          <option>Accessibility</option>
+        </select>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <label><input type="checkbox" id="subscribe" name="subscribe"> Subscribe to updates</label>
+        <button type="submit">Send</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dice Junkies</p>
+    </div>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

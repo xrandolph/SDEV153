@@ -1,55 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Dice Sets</title>
-  <link rel="stylesheet" href="styles/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Dice Junkies</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header>
-    <h1>Dice Junkies</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <img src="images/logo.png" alt="Dice Junkies logo" class="logo" width="96" height="96">
+      <h1>Shop</h1>
+      <nav aria-label="Primary" class="primary-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a aria-current="page" href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Our Dice Sets</h2>
-    <section class="product-list">
-      <article class="product">
-        <img src="assets/images/arcane-glow.jpg" alt="Arcane Glow Dice Set" />
-        <h3>Arcane Glow</h3>
-        <p>Translucent purple with glowing runes. Perfect for spellcasters.</p>
-        <p class="price">$14.99</p>
-        <a href="#" class="details-button">View Details</a>
-      </article>
+  <main id="main" class="container">
+    <section>
+      <h2>All Products</h2>
+      <div class="cards">
+        <article id="aurora" class="card product" tabindex="0">
+          <img src="images/aurora-set.jpg" alt="Aurora — teal dice set" width="600" height="400" loading="lazy">
+          <h3>Aurora</h3>
+          <p>$24.99</p>
+          <button data-product="Aurora">Add to cart</button>
+        </article>
 
-      <article class="product">
-        <img src="assets/images/dragonfire.jpg" alt="Dragonfire Dice Set" />
-        <h3>Dragonfire</h3>
-        <p>Fiery red and gold dice forged in dragon flame.</p>
-        <p class="price">$16.99</p>
-        <a href="#" class="details-button">View Details</a>
-      </article>
+        <article id="ember" class="card product" tabindex="0">
+          <img src="images/ember-set.jpg" alt="Ember — red and black dice set" width="600" height="400" loading="lazy">
+          <h3>Ember</h3>
+          <p>$24.99</p>
+          <button data-product="Ember">Add to cart</button>
+        </article>
 
-      <article class="product">
-        <img src="assets/images/frostbite.jpg" alt="Frostbite Dice Set" />
-        <h3>Frostbite</h3>
-        <p>Chilling blue and white dice for icy adventures.</p>
-        <p class="price">$13.99</p>
-        <a href="#" class="details-button">View Details</a>
-      </article>
+        <article id="starlight" class="card product" tabindex="0">
+          <img src="images/starlight-set.jpg" alt="Starlight — blue glitter dice set" width="600" height="400" loading="lazy">
+          <h3>Starlight</h3>
+          <p>$24.99</p>
+          <button data-product="Starlight">Add to cart</button>
+        </article>
+      </div>
+      <aside class="cart" aria-live="polite" aria-atomic="true">
+        <h2>Cart</h2>
+        <ul id="cartList"></ul>
+        <p id="cartEmpty">Your cart is empty.</p>
+      </aside>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Dice Junkies. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dice Junkies</p>
+    </div>
   </footer>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

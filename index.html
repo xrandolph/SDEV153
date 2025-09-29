@@ -1,34 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dice Junkies</title>
-  <link rel="stylesheet" href="styles/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dice Junkies — Custom D&D Dice</title>
+  <meta name="description" content="Dice Junkies is a fictional e‑commerce site for custom Dungeons & Dragons dice sets.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header>
-    <h1>Dice Junkies</h1>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <img src="images/logo.png" alt="Dice Junkies logo: stylized d20" class="logo" width="128" height="128">
+      <h1>Dice Junkies</h1>
+      <p class="tagline">Roll with style. Crit with confidence.</p>
+      <nav aria-label="Primary" class="primary-nav">
+        <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="navList">Menu</button>
+        <ul id="navList" class="nav-list">
+          <li><a aria-current="page" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="font-controls" aria-label="Font size controls">
+        <button id="fontDec" title="Decrease text size" aria-label="Decrease text size">A−</button>
+        <button id="fontReset" title="Reset text size" aria-label="Reset text size">A</button>
+        <button id="fontInc" title="Increase text size" aria-label="Increase text size">A+</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome Adventurer!</h2>
-      <p>Explore our magical collection of Dungeons & Dragons dice sets. Whether rogue, wizard, or bard, we have the perfect set for your next campaign.</p>
-      <a href="shop.html" class="cta-button">Browse Dice Sets</a>
+  <main id="main" class="container">
+    <section aria-labelledby="feature-heading" class="feature">
+      <h2 id="feature-heading">Featured Sets</h2>
+      <p>Hand‑poured, sharp‑edged resin dice with shimmering inclusions. Every set is balanced and play‑ready.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="images/aurora-set.jpg" alt="Aurora set — translucent teal dice with silver numbers" width="600" height="400" loading="lazy">
+          <h3>Aurora</h3>
+          <p>Cool teal resin with silver inking. Perfect for rangers and druids.</p>
+          <a class="button" href="shop.html#aurora">View in shop</a>
+        </article>
+
+        <article class="card">
+          <img src="images/ember-set.jpg" alt="Ember set — black dice with ember‑red swirls and gold numbers" width="600" height="400" loading="lazy">
+          <h3>Ember</h3>
+          <p>Smoldering reds and blacks for your favorite warlock or sorcerer.</p>
+          <a class="button" href="shop.html#ember">View in shop</a>
+        </article>
+
+        <article class="card">
+          <img src="images/starlight-set.jpg" alt="Starlight set — deep blue dice with sparkles and white numbers" width="600" height="400" loading="lazy">
+          <h3>Starlight</h3>
+          <p>Star‑flecked blues that shine under table lights.</p>
+          <a class="button" href="shop.html#starlight">View in shop</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="why" class="callout">
+      <h2 id="why">Why Dice Junkies?</h2>
+      <ul>
+        <li>Balanced, hand‑tested rolls</li>
+        <li>Accessible, readable number inking</li>
+        <li>Eco‑friendly packaging</li>
+      </ul>
+      <p>New to tabletop? Start with <a href="https://dnd.wizards.com/how-to-play" target="_blank" rel="noopener">Wizards of the Coast’s How to Play</a>,
+         compare dice quality at <a href="https://www.dicegoblins.com/" target="_blank" rel="noopener">Dice Goblins</a>,
+         and learn accessibility guidelines at <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">W3C WCAG</a>.</p>
+    </section>
+
+    <section class="table-wrap" aria-labelledby="specs">
+      <h2 id="specs">Set Specifications</h2>
+      <table>
+        <caption>Included polyhedrals and sizes (mm)</caption>
+        <thead>
+          <tr><th scope="col">Die</th><th scope="col">Count</th><th scope="col">Edge</th><th scope="col">Face‑to‑face</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">d4</th><td>1</td><td>Sharp</td><td>18</td></tr>
+          <tr><th scope="row">d6</th><td>1</td><td>Sharp</td><td>16</td></tr>
+          <tr><th scope="row">d8</th><td>1</td><td>Sharp</td><td>15</td></tr>
+          <tr><th scope="row">d10</th><td>1</td><td>Sharp</td><td>15</td></tr>
+          <tr><th scope="row">d%</th><td>1</td><td>Sharp</td><td>15</td></tr>
+          <tr><th scope="row">d12</th><td>1</td><td>Sharp</td><td>22</td></tr>
+          <tr><th scope="row">d20</th><td>1</td><td>Sharp</td><td>22</td></tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Dice Realms. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dice Junkies • <a href="https://github.com/xrandolph/SDEV153">GitHub Repo</a></p>
+      <ul class="social">
+        <li><a href="https://discord.com/" target="_blank" rel="noopener">Discord</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
   </footer>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
